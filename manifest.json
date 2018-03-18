@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Word Lookup",
+    "version": "0.1",
+    "permissions": [
+        "http://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "big-dictionary.png",
+        "default_popup": "index.html",
+        "default_title": "Word Lookup"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    }
+}
